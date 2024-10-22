@@ -18,7 +18,7 @@ public class CarController {
             model.addAttribute("cars___", cList);
             return "cars";
         }
-        int quantity = Integer.valueOf(request.getParameter("count"));
+        int quantity = Integer.parseInt(request.getParameter("count"));
         List<Car> outList = cList.stream().limit(quantity).toList();
         model.addAttribute("cars___", outList);
         return "cars";
