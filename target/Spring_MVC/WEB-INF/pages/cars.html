@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <table style="border-collapse: collapse;">
+        <tr th:each="car, iter : ${cars___}"
+            th:style="${iter.odd}? 'font-weight: bold;'">
+            <td style="border: 1px solid black;" th:text="   ${car.id}   "></td>
+            <td style="border: 1px solid black;" th:text="${car.model}   "></td>
+            <td style="border: 1px solid black;" th:text="   ${car.series}   "></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
